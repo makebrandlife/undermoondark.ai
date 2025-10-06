@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="nocturnal">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnderMoon | Quantum Neural Night Exploration Platform</title>
+    
+    <!-- Night Exploration Meta -->
+    <meta name="ai-architecture" content="StellarNet-v3 + LunarTransformer-8B + DarkVisionNN">
+    <meta name="neural-params" content="28B-parameters">
+    <meta name="consciousness-layer" content="NocturnalPatterns + CelestialMapping + DarkSkyPreservation">
+    
+    <!-- Preload Everything -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+
+    <style>
+        /* === NOCTURNAL DESIGN SYSTEM === */
+        :root {
+            /* Night Exploration Spectrum */
+            --cosmic-void: #0a0a1a;
+            --stellar-black: #0f0f23;
+            --midnight-blue: #1e1e40;
+            --neural-purple: #7c3aed;
+            --quantum-teal: #22d3ee;
+            --lunar-silver: #cbd5e1;
+            --starlight-gold: #fbbf24;
+            --aurora-green: #10b981;
+            --nebula-pink: #ec4899;
+            --galaxy-orange: #f97316;
+            
+            /* Celestial Gradients */
+            --gradient-nocturnal: linear-gradient(135deg, var(--midnight-blue), var(--neural-purple), var(--quantum-teal));
+            --gradient-stellar: linear-gradient(45deg, var(--quantum-teal) 0%, var(--neural-purple) 50%, var(--nebula-pink) 100%);
+            --gradient-lunar: linear-gradient(135deg, var(--lunar-silver), var(--starlight-gold));
+            
+            /* Night Dimensions */
+            --shadow-stellar: 0 0 60px rgba(34, 211, 238, 0.3);
+            --shadow-cosmic: 0 0 100px rgba(124, 58, 237, 0.2);
+            --shadow-nocturnal: 0 8px 32px rgba(0, 0, 0, 0.6);
+            
+            /* Celestial Typography */
+            --font-stellar: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            
+            /* Night Transitions */
+            --transition-celestial: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-nocturnal: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            
+            /* Space Spacing */
+            --space-quantum: 0.25rem;
+            --space-stellar: 0.5rem;
+            --space-celestial: 1rem;
+            --space-cosmic: 2rem;
+            --space-galactic: 4rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-stellar);
+            background: var(--cosmic-void);
+            color: var(--lunar-silver);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-weight: 400;
+            position: relative;
+        }
+
+        /* === CELESTIAL BACKGROUND SYSTEM === */
+        .stellar-dimension {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1000;
+            background: var(--cosmic-void);
+            overflow: hidden;
+        }
+
+        .cosmic-fabric {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, var(--quantum-teal) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, var(--neural-purple) 0%, transparent 40%),
+                radial-gradient(circle at 30% 90%, var(--nebula-pink) 0%, transparent 40%),
+                radial-gradient(circle at 70% 10%, var(--starlight-gold) 0%, transparent 40%);
+            opacity: 0.08;
+            animation: cosmicResonance 20s ease-in-out infinite;
+        }
+
+        .starfield {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 4s infinite;
+        }
+
+        @keyframes cosmicResonance {
+            0%, 100% { opacity: 0.08; transform: scale(1) rotate(0deg); }
+            33% { opacity: 0.12; transform: scale(1.1) rotate(120deg); }
+            66% { opacity: 0.1; transform: scale(1.05) rotate(240deg); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* === NIGHT NAVIGATION === */
+        .nocturnal-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(25px) saturate(200%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10000;
+            transition: all var(--transition-nocturnal);
+        }
+
+        .nocturnal-nav.scrolled {
+            background: rgba(15, 15, 35, 0.98);
+            box-shadow: var(--shadow-nocturnal);
+            border-bottom-color: rgba(34, 211, 238, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-cosmic);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .stellar-brand {
+            display: flex;
+            align-items: center;
+            gap: var(--space-celestial);
+        }
+
+        .lunar-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-stellar);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--lunar-silver);
+            position: relative;
+            text-decoration: none;
+        }
+
+        .lunar-logo::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--quantum-teal);
+            border-radius: 50%;
+            top: -2px;
+            right: -2px;
+            animation: pulse 2s infinite;
+        }
+
+        .nocturnal-search {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 var(--space-galactic);
+            position: relative;
+        }
+
+        .stellar-search-input {
+            width: 100%;
+            padding: 0.875rem 1rem 0.875rem 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+            border-radius: 2rem;
+            color: var(--lunar-silver);
+            font-size: 0.95rem;
+            transition: all var(--transition-nocturnal);
+            font-family: var(--font-stellar);
+            font-weight: 500;
+        }
+
+        .stellar-search-input:focus {
+            outline: none;
+            border-color: var(--quantum-teal);
+            box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.1);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--quantum-teal);
+            font-size: 1rem;
+        }
+
+        .nocturnal-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-celestial);
+        }
+
+        .nav-nocturnal-btn {
+            display: flex;
+            align-items: center;
+            gap: var(--space-stellar);
+            padding: 0.75rem 1.25rem;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1.25rem;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all var(--transition-nocturnal);
+            cursor: pointer;
+        }
+
+        .nav-nocturnal-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--quantum-teal);
+            color: var(--lunar-silver);
+            transform: translateY(-2px);
+        }
+
+        .nav-nocturnal-btn.stellar-core {
+            background: var(--gradient-stellar);
+            color: var(--cosmic-void);
+            font-weight: 700;
+            border: none;
+            box-shadow: var(--shadow-stellar);
+        }
+
+        /* === NIGHT HERO SECTION === */
+        .stellar-hero-dimension {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-stellar-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-galactic);
+            align-items: center;
+            width: 100%;
+        }
+
+        .stellar-content {
+            max-width: 600px;
+        }
+
+        .nocturnal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-stellar);
+            background: rgba(124, 58, 237, 0.2);
+            border: 2px solid var(--neural-purple);
+            color: var(--neural-purple);
+            padding: 0.7rem 1.25rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: var(--space-galactic);
+            animation: stellarPulse 4s ease-in-out infinite;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes stellarPulse {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(124, 58, 237, 0.6);
+                transform: scale(1.02);
+            }
+        }
+
+        .hero-stellar-title {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: var(--space-cosmic);
+            background: var(--gradient-nocturnal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stellar-subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: var(--space-galactic);
+            font-weight: 400;
+        }
+
+        .nocturnal-features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-celestial);
+            margin-bottom: var(--space-galactic);
+        }
+
+        .nocturnal-feature-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-cosmic);
+            padding: 1.25rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            border-left: 4px solid var(--quantum-teal);
+            transition: all var(--transition-nocturnal);
+        }
+
+        .nocturnal-feature-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(8px) translateY(-2px);
+            box-shadow: var(--shadow-stellar);
+        }
+
+        .feature-stellar-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-stellar);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--cosmic-void);
+            flex-shrink: 0;
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--lunar-silver);
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-description {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .stellar-actions-grid {
+            display: flex;
+            gap: var(--space-cosmic);
+            margin-bottom: var(--space-galactic);
+        }
+
+        .btn-stellar-exploration {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-celestial);
+            padding: 1.1rem 2.2rem;
+            background: var(--gradient-stellar);
+            color: var(--cosmic-void);
+            border: none;
+            border-radius: 2.2rem;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition-nocturnal);
+            box-shadow: var(--shadow-cosmic);
+        }
+
+        .btn-stellar-exploration:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(34, 211, 238, 0.4);
+        }
+
+        .btn-nocturnal-discover {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-celestial);
+            padding: 1.1rem 2.2rem;
+            background: rgba(255, 255, 255, 0.07);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            color: var(--lunar-silver);
+            border-radius: 2.2rem;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition-nocturnal);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-nocturnal-discover:hover {
+            border-color: var(--quantum-teal);
+            background: rgba(34, 211, 238, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* === NIGHT DASHBOARD === */
+        .stellar-dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-cosmic);
+        }
+
+        .stellar-dashboard-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(25px) saturate(180%);
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+            border-radius: 1.8rem;
+            padding: var(--space-cosmic);
+            transition: all var(--transition-nocturnal);
+        }
+
+        .stellar-dashboard-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--quantum-teal);
+            box-shadow: var(--shadow-stellar);
+        }
+
+        .dashboard-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-cosmic);
+        }
+
+        .dashboard-card-header h3 {
+            display: flex;
+            align-items: center;
+            gap: var(--space-stellar);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--lunar-silver);
+        }
+
+        .stellar-live-badge {
+            background: var(--gradient-stellar);
+            color: var(--cosmic-void);
+            padding: 0.4rem 0.8rem;
+            border-radius: 1.5rem;
+            font-size: 0.75rem;
+            font-weight: 800;
+            animation: stellarPulse 3s infinite;
+            text-transform: uppercase;
+        }
+
+        .stellar-data-display {
+            text-align: center;
+        }
+
+        .stellar-data-value {
+            font-size: 2.2rem;
+            font-weight: 900;
+            background: var(--gradient-nocturnal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-stellar);
+            line-height: 1;
+        }
+
+        .stellar-data-description {
+            color: #64748b;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* === NIGHT ACTIVITY SECTIONS === */
+        .night-activity-section {
+            padding: 6rem 2rem;
+            background: rgba(10, 10, 26, 0.8);
+        }
+
+        .activity-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            background: var(--gradient-nocturnal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-cosmic);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-cosmic);
+        }
+
+        .activity-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(25px);
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+            border-radius: 1.8rem;
+            padding: var(--space-cosmic);
+            transition: all var(--transition-nocturnal);
+            cursor: pointer;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--quantum-teal);
+            box-shadow: var(--shadow-stellar);
+        }
+
+        .activity-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-celestial);
+            margin-bottom: var(--space-cosmic);
+        }
+
+        .activity-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-stellar);
+            border-radius: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--cosmic-void);
+        }
+
+        .activity-name {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--lunar-silver);
+        }
+
+        .activity-description {
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: var(--space-cosmic);
+        }
+
+        .activity-features {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-stellar);
+        }
+
+        .activity-feature {
+            display: flex;
+            align-items: center;
+            gap: var(--space-stellar);
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .activity-feature::before {
+            content: '✦';
+            color: var(--quantum-teal);
+            font-weight: bold;
+        }
+
+        /* === STARGAZING LOCATIONS === */
+        .stargazing-section {
+            padding: 6rem 2rem;
+            background: rgba(15, 15, 35, 0.9);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-cosmic);
+            margin-top: 3rem;
+        }
+
+        .location-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(25px);
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+            border-radius: 1.5rem;
+            padding: var(--space-cosmic);
+            transition: all var(--transition-nocturnal);
+        }
+
+        .location-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--quantum-teal);
+            box-shadow: var(--shadow-stellar);
+        }
+
+        .location-image {
+            width: 100%;
+            height: 160px;
+            background: var(--gradient-stellar);
+            border-radius: 1rem;
+            margin-bottom: var(--space-celestial);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cosmic-void);
+            font-size: 2.5rem;
+        }
+
+        .location-name {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--lunar-silver);
+            margin-bottom: var(--space-stellar);
+        }
+
+        .location-description {
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: var(--space-celestial);
+            font-size: 0.9rem;
+        }
+
+        .location-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-stellar);
+            margin-bottom: var(--space-celestial);
+        }
+
+        .location-feature {
+            background: rgba(34, 211, 238, 0.15);
+            color: var(--quantum-teal);
+            padding: 0.2rem 0.6rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .location-actions {
+            display: flex;
+            gap: var(--space-stellar);
+        }
+
+        .btn-location {
+            flex: 1;
+            padding: 0.7rem 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            color: var(--lunar-silver);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-nocturnal);
+        }
+
+        .btn-location:hover {
+            background: var(--quantum-teal);
+            color: var(--cosmic-void);
+        }
+
+        /* === MOON PHASE TRACKER === */
+        .moon-phase-section {
+            padding: 6rem 2rem;
+            background: rgba(10, 10, 26, 0.9);
+        }
+
+        .moon-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .moon-phase-display {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 2rem;
+            padding: var(--space-galactic);
+            margin: 3rem 0;
+        }
+
+        .moon-visual {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--gradient-lunar);
+            margin: 0 auto 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .moon-crater {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+        }
+
+        .moon-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-cosmic);
+            margin-top: 2rem;
+        }
+
+        .moon-stat {
+            text-align: center;
+        }
+
+        .moon-stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--starlight-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .moon-stat-label {
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .hero-stellar-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-stellar-title {
+                font-size: 2.3rem;
+            }
+            
+            .stellar-actions-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+            }
+            
+            .nocturnal-search {
+                margin: 1rem 0;
+                max-width: 100%;
+            }
+            
+            .activity-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* === NOTIFICATION SYSTEM === */
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1.5px solid;
+            border-radius: 1rem;
+            padding: 1rem 1.5rem;
+            color: var(--lunar-silver);
+            font-weight: 600;
+            z-index: 10001;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            max-width: 300px;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.success {
+            border-color: var(--aurora-green);
+            background: rgba(16, 185, 129, 0.2);
+        }
+
+        .notification.info {
+            border-color: var(--quantum-teal);
+            background: rgba(34, 211, 238, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Celestial Background -->
+    <div class="stellar-dimension">
+        <div class="cosmic-fabric"></div>
+        <div class="starfield" id="starfield"></div>
+    </div>
+
+    <!-- Notification System -->
+    <div id="notificationContainer"></div>
+
+    <!-- Night Navigation -->
+    <nav class="nocturnal-nav" id="nocturnalNav">
+        <div class="nav-container">
+            <div class="stellar-brand">
+                <a href="#" class="lunar-logo">
+                    <i class="fas fa-moon-stars"></i>
+                    UnderMoon
+                </a>
+            </div>
+
+            <div class="nocturnal-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="stellar-search-input" id="searchInput" placeholder="Search stargazing spots, night activities, celestial events...">
+            </div>
+
+            <div class="nocturnal-actions">
+                <button class="nav-nocturnal-btn" onclick="showSection('stargazingSection')">
+                    <i class="fas fa-star"></i>
+                    Stargazing
+                </button>
+                <button class="nav-nocturnal-btn" onclick="showSection('moonPhaseSection')">
+                    <i class="fas fa-moon"></i>
+                    Moon Tracker
+                </button>
+                <button class="nav-nocturnal-btn stellar-core" onclick="showSection('activitySection')">
+                    <i class="fas fa-compass"></i>
+                    Night Guide
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Night Hero Section -->
+    <section class="stellar-hero-dimension" id="heroSection">
+        <div class="hero-stellar-container">
+            <div class="stellar-content">
+                <div class="nocturnal-badge">
+                    <i class="fas fa-satellite"></i>
+                    Quantum Night Exploration Active
+                </div>
+
+                <h1 class="hero-stellar-title">
+                    Discover the Night<br>
+                    <span style="font-size: 0.8em;">Like Never Before</span>
+                </h1>
+
+                <p class="stellar-subtitle">
+                    UnderMoon uses quantum AI to reveal hidden celestial wonders, perfect stargazing conditions, 
+                    and magical nocturnal experiences. Explore the universe after dark with intelligent guidance.
+                </p>
+
+                <div class="nocturnal-features-grid">
+                    <div class="nocturnal-feature-item">
+                        <div class="feature-stellar-icon">
+                            <i class="fas fa-star-and-crescent"></i>
+                        </div>
+                        <div class="feature-content">
+                            <div class="feature-title">Celestial Event Prediction</div>
+                            <div class="feature-description">AI-powered forecasts for meteor showers, eclipses, and planetary alignments</div>
+                        </div>
+                    </div>
+                    <div class="nocturnal-feature-item">
+                        <div class="feature-stellar-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <div class="feature-title">Dark Sky Location Finder</div>
+                            <div class="feature-description">Discover pristine stargazing spots with minimal light pollution</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stellar-actions-grid">
+                    <button class="btn-stellar-exploration" onclick="showSection('activitySection')">
+                        <i class="fas fa-rocket"></i>
+                        Start Night Exploration
+                    </button>
+                    <button class="btn-nocturnal-discover" onclick="showSection('stargazingSection')">
+                        <i class="fas fa-binoculars"></i>
+                        Find Stargazing Spots
+                    </button>
+                </div>
+            </div>
+
+            <div class="stellar-dashboard-grid">
+                <div class="stellar-dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3><i class="fas fa-moon"></i> Moon Phase</h3>
+                        <span class="stellar-live-badge">Live</span>
+                    </div>
+                    <div class="stellar-data-display">
+                        <div class="stellar-data-value" id="moonPhase">87%</div>
+                        <div class="stellar-data-description">Waxing Gibbous</div>
+                    </div>
+                </div>
+
+                <div class="stellar-dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3><i class="fas fa-cloud-moon"></i> Viewing Conditions</h3>
+                        <span class="stellar-live-badge">Real-time</span>
+                    </div>
+                    <div class="stellar-data-display">
+                        <div class="stellar-data-value" id="viewingConditions">Excellent</div>
+                        <div class="stellar-data-description">Clear Skies</div>
+                    </div>
+                </div>
+
+                <div class="stellar-dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3><i class="fas fa-meteor"></i> Next Event</h3>
+                        <span class="stellar-live-badge">Upcoming</span>
+                    </div>
+                    <div class="stellar-data-display">
+                        <div class="stellar-data-value" id="nextEvent">3d</div>
+                        <div class="stellar-data-description">Meteor Shower</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Night Activities Section -->
+    <section class="night-activity-section" id="activitySection" style="display: none;">
+        <div class="activity-container">
+            <div class="section-header">
+                <h2 class="section-title">Night Exploration Activities</h2>
+                <p class="section-subtitle">
+                    Discover magical experiences under the stars with our AI-curated nocturnal adventures
+                </p>
+            </div>
+
+            <div class="activity-grid">
+                <div class="activity-card" onclick="showStargazingLocations()">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-stars"></i>
+                        </div>
+                        <div class="activity-name">Stargazing</div>
+                    </div>
+                    <div class="activity-description">
+                        Find perfect dark sky locations for observing constellations, planets, and deep space objects with crystal-clear visibility.
+                    </div>
+                    <div class="activity-features">
+                        <div class="activity-feature">Light pollution maps</div>
+                        <div class="activity-feature">Celestial object tracking</div>
+                        <div class="activity-feature">Telescope settings guide</div>
+                        <div class="activity-feature">Astrophotography tips</div>
+                    </div>
+                </div>
+
+                <div class="activity-card" onclick="showNocturnalWildlife()">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-otter"></i>
+                        </div>
+                        <div class="activity-name">Nocturnal Wildlife</div>
+                    </div>
+                    <div class="activity-description">
+                        Explore habitats of night-active animals with guided tours and observation spots for owls, bats, and other nocturnal creatures.
+                    </div>
+                    <div class="activity-features">
+                        <div class="activity-feature">Wildlife spotting guides</div>
+                        <div class="activity-feature">Guided night safaris</div>
+                        <div class="activity-feature">Animal behavior patterns</div>
+                        <div class="activity-feature">Conservation areas</div>
+                    </div>
+                </div>
+
+                <div class="activity-card" onclick="showNightPhotography()">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="activity-name">Night Photography</div>
+                    </div>
+                    <div class="activity-description">
+                        Capture stunning nightscapes, star trails, and celestial events with AI-powered camera settings and composition guidance.
+                    </div>
+                    <div class="activity-features">
+                        <div class="activity-feature">Camera settings calculator</div>
+                        <div class="activity-feature">Composition assistance</div>
+                        <div class="activity-feature">Light painting techniques</div>
+                        <div class="activity-feature">Editing workflows</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stargazing Locations Section -->
+    <section class="stargazing-section" id="stargazingSection" style="display: none;">
+        <div class="activity-container">
+            <div class="section-header">
+                <h2 class="section-title">Premium Stargazing Locations</h2>
+                <p class="section-subtitle">
+                    Curated dark sky locations with exceptional celestial viewing conditions
+                </p>
+            </div>
+
+            <div class="locations-grid" id="locationsGrid">
+                <!-- Locations will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Moon Phase Tracker -->
+    <section class="moon-phase-section" id="moonPhaseSection" style="display: none;">
+        <div class="moon-container">
+            <div class="section-header">
+                <h2 class="section-title">Lunar Phase Tracker</h2>
+                <p class="section-subtitle">
+                    Real-time moon phase information and optimal viewing times for lunar observation
+                </p>
+            </div>
+
+            <div class="moon-phase-display">
+                <div class="moon-visual" id="moonVisual">
+                    <!-- Moon visualization will be generated by JavaScript -->
+                </div>
+                <h3 id="currentMoonPhase">Waxing Gibbous Moon</h3>
+                <p id="moonDescription">87% illuminated - Perfect for lunar observation and photography</p>
+                
+                <div class="moon-info">
+                    <div class="moon-stat">
+                        <div class="moon-stat-value" id="moonAge">18.2</div>
+                        <div class="moon-stat-label">Days Old</div>
+                    </div>
+                    <div class="moon-stat">
+                        <div class="moon-stat-value" id="moonDistance">384,400</div>
+                        <div class="moon-stat-label">km Away</div>
+                    </div>
+                    <div class="moon-stat">
+                        <div class="moon-stat-value" id="nextFullMoon">5</div>
+                        <div class="moon-stat-label">Days to Full</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn-stellar-exploration" onclick="generateNightPlan()">
+                    <i class="fas fa-robot"></i>
+                    Generate Night Exploration Plan
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // ===== NIGHT EXPLORATION DATASET =====
+        const stargazingLocations = [
+            {
+                id: 1,
+                name: "Joshua Tree Dark Sky",
+                description: "Designated International Dark Sky Park with minimal light pollution and stunning Milky Way visibility.",
+                features: ["Dark Sky Certified", "Minimal Light Pollution", "Year-round Access", "Photography Friendly"],
+                icon: "🏜️",
+                lightPollution: "Very Low",
+                bestSeason: "Spring/Fall",
+                facilities: ["Camping", "Visitor Center", "Guided Tours"]
+            },
+            {
+                id: 2,
+                name: "Mauna Kea Summit",
+                description: "World's premier astronomical observatory site at 4,205m elevation with crystal-clear skies.",
+                features: ["High Altitude", "Professional Observatories", "Exceptional Seeing", "Visitor Program"],
+                icon: "🌋",
+                lightPollution: "Extremely Low",
+                bestSeason: "Year-round",
+                facilities: ["Visitor Center", "Telescopes", "Star Tours"]
+            },
+            {
+                id: 3,
+                name: "Cherry Springs State Park",
+                description: "One of the darkest spots on the East Coast, famous for its transparent night skies.",
+                features: ["Gold Tier Dark Sky", "Public Observatory", "Meteor Showers", "Educational Programs"],
+                icon: "🌲",
+                lightPollution: "Extremely Low",
+                bestSeason: "Summer",
+                facilities: ["Observatory", "Camping", "Star Parties"]
+            },
+            {
+                id: 4,
+                name: "Atacama Desert",
+                description: "Driest desert on Earth with over 300 clear nights per year and world-class observatories.",
+                features: ["Extreme Dryness", "High Elevation", "Research Grade", "ALMA Observatory"],
+                icon: "🏜️",
+                lightPollution: "None",
+                bestSeason: "Year-round",
+                facilities: ["Lodges", "Tours", "Observatories"]
+            }
+        ];
+
+        const nightActivities = [
+            {
+                id: 1,
+                name: "Meteor Shower Watching",
+                description: "Optimal viewing locations and times for annual meteor showers with AI-predicted peak activity.",
+                bestFor: ["Beginners", "Photographers", "Families"],
+                equipment: ["Blankets", "Red Flashlight", "Star Chart"],
+                difficulty: "Easy"
+            },
+            {
+                id: 2,
+                name: "Planetary Observation",
+                description: "Track Jupiter's moons, Saturn's rings, and Mars' surface features with telescope guidance.",
+                bestFor: ["Intermediate", "Astronomers", "Students"],
+                equipment: ["Telescope", "Planetary Filters", "Sky App"],
+                difficulty: "Medium"
+            }
+        ];
+
+        // ===== APPLICATION STATE =====
+        let currentState = {
+            currentSection: 'heroSection',
+            savedLocations: [],
+            userLocation: null,
+            nightPreferences: {}
+        };
+
+        // ===== NOTIFICATION SYSTEM =====
+        function showNotification(message, type = 'info') {
+            const container = document.getElementById('notificationContainer');
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-${type === 'success' ? 'check' : 'info-circle'}"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            container.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    container.removeChild(notification);
+                }, 300);
+            }, 4000);
+        }
+
+        // ===== STARFIELD GENERATION =====
+        function generateStarfield() {
+            const starfield = document.getElementById('starfield');
+            const starCount = 150;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const size = Math.random() * 2 + 1;
+                const left = Math.random() * 100;
+                const top = Math.random() * 100;
+                const delay = Math.random() * 4;
+                const duration = 2 + Math.random() * 3;
+                
+                star.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${left}%;
+                    top: ${top}%;
+                    animation-delay: ${delay}s;
+                    animation-duration: ${duration}s;
+                `;
+                
+                starfield.appendChild(star);
+            }
+        }
+
+        // ===== LOCATION MANAGEMENT =====
+        function initializeStargazingLocations() {
+            const locationsGrid = document.getElementById('locationsGrid');
+            locationsGrid.innerHTML = '';
+            
+            stargazingLocations.forEach(location => {
+                const card = document.createElement('div');
+                card.className = 'location-card';
+                card.innerHTML = `
+                    <div class="location-image">${location.icon}</div>
+                    <h3 class="location-name">${location.name}</h3>
+                    <p class="location-description">${location.description}</p>
+                    <div class="location-features">
+                        ${location.features.map(feature => 
+                            `<span class="location-feature">${feature}</span>`
+                        ).join('')}
+                    </div>
+                    <div class="stellar-data-display" style="margin: 1rem 0;">
+                        <div class="stellar-data-value">${location.lightPollution}</div>
+                        <div class="stellar-data-description">Light Pollution</div>
+                    </div>
+                    <div class="location-actions">
+                        <button class="btn-location" onclick="saveLocation(${location.id})">
+                            <i class="fas fa-bookmark"></i>
+                            Save
+                        </button>
+                        <button class="btn-location" onclick="viewLocationDetails(${location.id})">
+                            <i class="fas fa-info-circle"></i>
+                            Details
+                        </button>
+                    </div>
+                `;
+                locationsGrid.appendChild(card);
+            });
+        }
+
+        function saveLocation(locationId) {
+            if (!currentState.savedLocations.includes(locationId)) {
+                currentState.savedLocations.push(locationId);
+                saveUserData();
+                showNotification('Location saved to your night exploration list!', 'success');
+            } else {
+                showNotification('Location already saved', 'info');
+            }
+        }
+
+        function viewLocationDetails(locationId) {
+            const location = stargazingLocations.find(l => l.id === locationId);
+            if (location) {
+                showNotification(`Viewing details for ${location.name}`, 'info');
+                // In real implementation, show detailed modal
+            }
+        }
+
+        // ===== MOON PHASE SYSTEM =====
+        function initializeMoonPhase() {
+            // Simulate real-time moon data
+            updateMoonDisplay();
+            setInterval(updateMoonDisplay, 60000); // Update every minute
+        }
+
+        function updateMoonDisplay() {
+            // Simulated moon data - in real app, connect to astronomy API
+            const moonPhase = 87; // Percentage illuminated
+            const moonAge = 18.2; // Days since new moon
+            const moonDistance = 384400; // km
+            
+            document.getElementById('moonPhase').textContent = moonPhase + '%';
+            document.getElementById('moonAge').textContent = moonAge;
+            document.getElementById('moonDistance').textContent = moonDistance.toLocaleString();
+            document.getElementById('nextFullMoon').textContent = (29.53 - moonAge).toFixed(1);
+            
+            // Update moon visualization
+            updateMoonVisual(moonPhase);
+        }
+
+        function updateMoonVisual(phase) {
+            const moonVisual = document.getElementById('moonVisual');
+            moonVisual.innerHTML = '';
+            
+            // Create moon phase visualization
+            const illumination = phase / 100;
+            const shadowPosition = illumination > 0.5 ? 'left' : 'right';
+            
+            moonVisual.style.background = `linear-gradient(90deg, 
+                ${shadowPosition === 'right' ? '#fbbf24' : '#4b5563'} ${illumination * 100}%, 
+                ${shadowPosition === 'right' ? '#4b5563' : '#fbbf24'} ${illumination * 100}%)`;
+            
+            // Add some crater details
+            for (let i = 0; i < 8; i++) {
+                const crater = document.createElement('div');
+                crater.className = 'moon-crater';
+                
+                const size = Math.random() * 15 + 5;
+                const left = Math.random() * 80 + 10;
+                const top = Math.random() * 80 + 10;
+                
+                crater.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${left}%;
+                    top: ${top}%;
+                `;
+                
+                moonVisual.appendChild(crater);
+            }
+        }
+
+        // ===== ACTIVITY NAVIGATION =====
+        function showStargazingLocations() {
+            showSection('stargazingSection');
+            initializeStargazingLocations();
+        }
+
+        function showNocturnalWildlife() {
+            showNotification('Nocturnal wildlife features coming soon!', 'info');
+        }
+
+        function showNightPhotography() {
+            showNotification('Night photography guides coming soon!', 'info');
+        }
+
+        // ===== NIGHT PLAN GENERATOR =====
+        function generateNightPlan() {
+            showNotification('Generating personalized night exploration plan with quantum AI...', 'info');
+            
+            setTimeout(() => {
+                showNotification('Night exploration plan ready! Check your recommended activities.', 'success');
+                // In real implementation, generate and display plan
+            }, 2000);
+        }
+
+        // ===== SECTION MANAGEMENT =====
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show target section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+                currentState.currentSection = sectionId;
+            }
+        }
+
+        // ===== USER DATA MANAGEMENT =====
+        function loadUserData() {
+            const saved = localStorage.getItem('undermoon_night_explorer');
+            if (saved) {
+                currentState = {...currentState, ...JSON.parse(saved)};
+            }
+        }
+
+        function saveUserData() {
+            localStorage.setItem('undermoon_night_explorer', JSON.stringify(currentState));
+        }
+
+        // ===== DASHBOARD UPDATES =====
+        function initializeDashboard() {
+            // Simulate live data updates
+            setInterval(() => {
+                // Update viewing conditions randomly
+                const conditions = ['Excellent', 'Good', 'Fair', 'Poor'];
+                const randomCondition = conditions[Math.floor(Math.random() * conditions.length)];
+                document.getElementById('viewingConditions').textContent = randomCondition;
+                
+                // Update next event countdown
+                const nextEvent = document.getElementById('nextEvent');
+                const currentDays = parseInt(nextEvent.textContent);
+                if (currentDays > 0) {
+                    nextEvent.textContent = (currentDays - 0.1).toFixed(1) + 'd';
+                } else {
+                    nextEvent.textContent = 'Tonight!';
+                }
+            }, 5000);
+        }
+
+        // ===== SEARCH FUNCTIONALITY =====
+        function initializeSearch() {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase();
+                if (searchTerm.length > 2) {
+                    // Filter locations and activities
+                    showNotification(`Searching night activities for: ${searchTerm}`, 'info');
+                }
+            });
+        }
+
+        // ===== INITIALIZATION =====
+        document.addEventListener('DOMContentLoaded', function() {
+            loadUserData();
+            generateStarfield();
+            initializeStargazingLocations();
+            initializeMoonPhase();
+            initializeDashboard();
+            initializeSearch();
+            
+            window.addEventListener('scroll', handleNocturnalScroll);
+            
+            console.log('🌙 UnderMoon Night Explorer initialized');
+            console.log('✨ Stellar navigation systems active');
+            console.log('🛰️ Celestial tracking engaged');
+        });
+
+        function handleNocturnalScroll() {
+            const nav = document.getElementById('nocturnalNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
